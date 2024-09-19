@@ -1,1 +1,1 @@
-void hello.hpp
+void hello();

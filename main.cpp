@@ -3,12 +3,13 @@
 
 using namespace std;
 
-int main()
-	{
-	hello():
-	cout << "Hello,";
-	string name;
-	while (name != "stop")
-		{
-		cout << name <<endl;
+int main() {
+    hello();
+    string name = "";
+    do {
+	cin >> name;
+	if (name != "stop") {
+	    cout << "Hello, " << name << endl;
 	}
+    } while (name != "stop");
+}
