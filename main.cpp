@@ -9,7 +9,7 @@ int main() {
     do {
 	cin >> name;
 	if (name != "stop") {
-	    cout << "Hello, " << name << endl;
+	    cout << "Hello, " << name << "!" << endl;
 	}
     } while (name != "stop");
 }
