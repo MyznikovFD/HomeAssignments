@@ -6,4 +6,4 @@ st129282@student.spbu.ru
 
 Сборка make
 
-Запуск ./hello
+Запуск ./hello.app
