@@ -4,6 +4,6 @@
 
 st129282@student.spbu.ru
 
-Сборка make
+Сборка `make` или `make hello`
 
-Запуск ./hello.app
+Запуск `./hello`
