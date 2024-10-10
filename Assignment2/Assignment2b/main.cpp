@@ -15,10 +15,23 @@ void push(std::string s)
         stack[head++] = num;
 }
 
-void opreation(char cOpr)
-{
 
+void operation(char cOpr)
+{
+    if (cOpr = '+')
+         {}
 }
+
+double pop()
+{
+    return stack[head--];
+}
+
+double opAddition()
+{
+return (pop()+stack[head]);
+}
+
 
 
 
