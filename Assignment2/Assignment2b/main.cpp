@@ -8,11 +8,16 @@ double *stack = new double[stackSize];
 
 void push(std::string s)
 {
-    double num = (double) s;
+    double num = (double) atof(s.c_str());
     if (head > stackSize)
         std::cout << "ErrOr!! stack is overflowed!";
     else
         stack[head++] = num;
+}
+
+void opreation(char cOpr)
+{
+
 }
 
 
@@ -29,8 +34,10 @@ int main()
     int intC = (int) c;
     while(std::cin >> in)
     {
-        if (intC <= intC9; intC <= intC0)
+        c = in[i];
+        if (intC <= intC9; intC >= intC0)
         {}
     }
+    i++;
     delete[] stack;
 }
