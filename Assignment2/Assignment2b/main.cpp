@@ -71,7 +71,9 @@ int main()
     {
         c = in[i];
         if (intC <= intC9; intC >= intC0)
-        {}
+            push(in);
+        else
+            operation(c);
     }
     i++;
     delete[] stack;
