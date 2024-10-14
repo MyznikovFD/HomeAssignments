@@ -24,40 +24,48 @@ void doublePush(double num)
 
 double pop()
 {
-    return stack[head--];
+    //std::cout << stack[head] << std::endl;
+    return stack[--head];
 }
 
 double opAddition()
 {
-return (stack[head] + pop());
+    return ( pop() + stack[head + 1]);
 }
 double opDivision()
 {
-return (stack[head] / pop());
+    return ( pop() / stack[head + 1]);
 }
 double opDifference()
 {
-return (stack[head] - pop());
+    return ( pop() - stack[head + 1]);
 }
 double opMultiplication()
 {
-return (stack[head] * pop());
+    return ( pop() * stack[head + 1]);
 }
 
 
 double operation(char cOpr)
 {
-    if (cOpr == '+')
+    if (cOpr == '+') {
+        std::cout << stack[head] << std::endl;
         return (opAddition());
-    if (cOpr == '/')
+    }
+    else if (cOpr == '/') {
         return (opDivision());
-    if (cOpr == '-')
+    }
+    else if (cOpr == '-') {
         return (opDifference());
-    if (cOpr == '*')
+    }
+    else if (cOpr == '*') {
         return(opMultiplication());
+    }
     else
+        {
         std::cout << "ErROr!! indefined operation!" << std::endl;
         exit(EXIT_FAILURE);
+    }
         return 0;
 }
 
@@ -66,25 +74,47 @@ double operation(char cOpr)
 int main()
 {
     unsigned char c;
-    std::string in;
+    std::string in = "";
     unsigned char c0 = '0';
     unsigned char c9 = '9';
-    int intC9 = (int) c9;
-    int intC0 = (int) c0;
-    while(std::cin >> in)
+    int codeC9 = (int) c9;
+    int codeC0 = (int) c0;
+    std::string allInput;
+    std::getline(std::cin, allInput);
+    const int inptSize = allInput.length();
+    int count = 0;
+    int i = 0;
+    while(count < inptSize)
     {
-        c = in[0];
-        int intC = (int) c;
-        if (intC <= intC9; intC >= intC0)
-           strPush(in);
+        c = allInput[count];
+        int codeC = (int) c;
+        if (c == ' ')
+        {
+            count++;
+        }
+        else if (codeC <= codeC9 && codeC >= codeC0)
+        {
+            while (count < inptSize && c != ' ')
+            {
+                in += c;
+                count++;
+                c = allInput[count];
+            }
+
+            strPush(in);
+            in = "";
+        }
         else
-           operation(c);
-        std::cout << '/';
-       int i = 0;
-       while (i <= head)
-            std::cout << stack[i] << std::endl;
-            i++;
+        {
+            //std::cout << c << std::endl;
+            operation(c);
+            count++;
+        }
+        //std::cout << head << std::endl;
+       // std::cout << stack[head] << std::endl;
     }
-    std::cout << stack[head];
+    while (i++ <= head)
+        //std::cout << stack[i] << std::endl;
+    //std::cout << stack[head] << std::endl;
     delete[] stack;
 }
