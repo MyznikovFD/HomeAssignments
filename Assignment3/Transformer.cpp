@@ -3,43 +3,77 @@
 
 typedef unsigned int uint;
 
-void Transformer::setStrength(uint strength) {
-_strength = strength;
+int main() {
+    Transformers optimus;
+    std::cout << "Level: " << optimus.getLevel() << std::endl;
+    std::cout << "Strength: " << optimus.getStrength() << std::endl;
+    std::cout << "Range: " << optimus.getRange() << std::endl;
+    std::cout << "Fuel: " << optimus.getFuel() << std::endl;
+    std::cout << "Ammo: " << optimus.getAmmo() << std::endl;
+}
+
+Transformers::Transformers() {       
+
+}
+
+
+bool move() {
+    return true;
 };
 
-void Transformer::setLevel(uint level) {
-_level = level;
+bool jump() {
+    return true;
 };
 
-void Transformer::setRange(uint range) {
-_range = range;
+bool fire() {
+    return true;
 };
 
-void Transformer::setFuel(uint fuel) {
-_fuel = fuel;
+bool ultimate() {
+    return true;
 };
 
-void Transformer::setAmmo(uint ammo) {
-_ammo = ammo;
+bool transform() {
+    return true;
+};
+
+void Transformers::setStrength(uint strength) {
+    _strength = strength;
+};
+
+void Transformers::setLevel(uint level) {
+    _level = level;
+};
+
+void Transformers::setRange(uint range) {
+    _range = range;
+};
+
+void Transformers::setFuel(uint fuel) {
+    _fuel = fuel;
+};
+
+void Transformers::setAmmo(uint ammo) {
+    _ammo = ammo;
 };
 
 
-uint Transformer::getStrength() {
+uint Transformers::getStrength() {
     return (_strength);
 };
 
-uint Transformer::getLevel() {
+uint Transformers::getLevel() {
     return (_level);
 };
 
-uint Transformer::getRange() {
+uint Transformers::getRange() {
     return (_range);
 };
 
-uint Transformer::getFuel() {
+uint Transformers::getFuel() {
     return (_fuel);
 };
 
-uint Transformer::getAmmo() {
+uint Transformers::getAmmo() {
     return (_ammo);
 };

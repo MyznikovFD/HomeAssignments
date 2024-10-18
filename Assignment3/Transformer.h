@@ -4,13 +4,10 @@
 
 typedef unsigned int uint;
 
-class Transformer {
+class Transformers {
     public:
-        Transformer() {
-            std::cout << "Level: " << getLevel << " Strength: " << getStrength << " Range: " << getRange << " Fuel: " << getFuel << " Ammo: " << getAmmo << std::endl;
-        };
+        Transformers();
         bool move();
-        bool turn();
         bool jump();
         bool fire();
         bool ultimate();
@@ -26,10 +23,10 @@ class Transformer {
         uint getFuel();
         uint getAmmo();
     private:
-        uint _level;
-        uint _strength;
-        uint _range;
-        uint _fuel;
-        uint _ammo;
+        uint _level = 0;
+        uint _strength = 0;
+        uint _range = 0;
+        uint _fuel = 0;
+        uint _ammo = 0;
 };
 #endif
