@@ -12,6 +12,10 @@ bool Decepticons::attack() {
     return true;
 };
 
+bool Decepticons::mock() {
+    return true;
+};
+
 void Decepticons::setFuel(uint fuel) {
     _fuel = fuel;
 };
