@@ -21,7 +21,7 @@ void push(double num)
 double pop()
 {
     if (head <= 0)
-        std::cout << "ErrOr!! head <= 0" << std::endl;
+        std::cout << "ErrOr!! Too much operations!" << std::endl;
     else
         head--;
     return stack[head];
@@ -108,6 +108,6 @@ int main()
             count++;
         }
     }
-    std::cout << stack[head - 1] << std::endl;
+    std::cout << pop() << std::endl;
     delete[] stack;
 }
