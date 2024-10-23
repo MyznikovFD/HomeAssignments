@@ -6,67 +6,67 @@ const int stackSize = 50;
 double *stack = new double[stackSize];
 
 
-void strPush(std::string s)
-{
-    double num = (double) atof(s.c_str());
-    if (head > stackSize)
-        std::cout << "ErrOr!! stack is overflowed!";
-    else
-        stack[head++] = num;
-}
-void doublePush(double num)
+
+void push(double num)
 {
     if (head > stackSize)
-        std::cout << "ErrOr!! stack is overflowed!";
+        std::cout << "ErrOr!! stack is overflowed!" << std::endl;
     else
+    {
         stack[head] = num;
+        head++;
+    }
 }
 
 double pop()
 {
-    //std::cout << stack[head] << std::endl;
-    return stack[--head];
+    if (head <= 0)
+        std::cout << "ErrOr!! head <= 0" << std::endl;
+    else
+        head--;
+    return stack[head];
 }
 
-double opAddition()
+void opAddition()
 {
-    return ( pop() + stack[head + 1]);
+    push(pop() + pop());
 }
-double opDivision()
+
+void opDivision()
 {
-    return ( pop() / stack[head + 1]);
+    double divis = pop();
+    double divid = pop();
+    push(divid / divis);
 }
-double opDifference()
+void opDifference()
 {
-    return ( pop() - stack[head + 1]);
+    push(-(pop() - pop()));
 }
-double opMultiplication()
+void opMultiplication()
 {
-    return ( pop() * stack[head + 1]);
+    push(pop() * pop());
 }
 
 
-double operation(char cOpr)
+void operation(char cOpr)
 {
     if (cOpr == '+') {
-        std::cout << stack[head] << std::endl;
-        return (opAddition());
+        opAddition();
     }
     else if (cOpr == '/') {
-        return (opDivision());
+        opDivision();
     }
     else if (cOpr == '-') {
-        return (opDifference());
+        opDifference();
     }
     else if (cOpr == '*') {
-        return(opMultiplication());
+        opMultiplication();
     }
     else
         {
         std::cout << "ErROr!! indefined operation!" << std::endl;
         exit(EXIT_FAILURE);
     }
-        return 0;
 }
 
 
@@ -83,7 +83,6 @@ int main()
     std::getline(std::cin, allInput);
     const int inptSize = allInput.length();
     int count = 0;
-    int i = 0;
     while(count < inptSize)
     {
         c = allInput[count];
@@ -100,21 +99,15 @@ int main()
                 count++;
                 c = allInput[count];
             }
-
-            strPush(in);
+            push((double) atof(in.c_str()));
             in = "";
         }
         else
         {
-            //std::cout << c << std::endl;
             operation(c);
             count++;
         }
-        //std::cout << head << std::endl;
-       // std::cout << stack[head] << std::endl;
     }
-    while (i++ <= head)
-        //std::cout << stack[i] << std::endl;
-    //std::cout << stack[head] << std::endl;
+    std::cout << stack[head - 1] << std::endl;
     delete[] stack;
 }
