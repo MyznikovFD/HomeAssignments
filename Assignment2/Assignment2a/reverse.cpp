@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <limits.h>
+
 
 int main()
 {
     int size = std::filesystem::file_size("rabbit.txt");
-    char *buffer = new char[size];
+    char *buffer = new char[CHAR_BIT * size];
 
     std::ifstream infile;
     infile.open("rabbit.txt", std::ios::binary | std::ios::in);
@@ -24,18 +26,11 @@ int main()
     }
 
     std::ofstream outfile;
-    outfile.open("reversedRabbit.bin", std::ios::binary | std::ios::out);
+    outfile.open("reversedRabbit.txt", std::ios::binary | std::ios::out);
     if (!outfile.is_open())
         std::cout << "Error outfile is not opened!" << std::endl;
     else
         outfile.write((char*)buffer, sizeof(buffer));
     outfile.close();
     delete[] buffer;
-
-
-    //contenting of rabbit.txt
-    std::ofstream inRabbit;
-    inRabbit.open("rabbit.txt");
-    inRabbit << "White" << std::endl << "Rabbit" << std::endl;
-    inRabbit.close();
 }
