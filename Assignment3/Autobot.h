@@ -11,15 +11,10 @@ class Autobots: public Transformers {
         bool roar();
         bool defend();
         bool shame();
-        void setFuel(uint fuel);
-        void setAmmo(uint ammo);
-        void setWeapon(std::string weapon);
-        uint getFuel();
-        uint getAmmo();
-        std::string getWeapon();        
+        void setDefence(std::string defence);
+        std::string getDefence();        
     private:
-        std::string _weapon = "shield";
-        uint _fuel = 0;
-        uint _ammo = 0;
+        std::string _defence = "shield";
+        uint cruelty = 10;
 };
 #endif

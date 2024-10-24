@@ -16,26 +16,18 @@ bool Autobots::shame() {
     return true;
 };
 
-void Autobots::setFuel(uint fuel) {
-    _fuel = fuel;
+void Autobots::setDefence(std::string defence) {
+    _defence = defence;
 };
 
-void Autobots::setAmmo(uint ammo) {
-    _ammo = ammo;
+void Autobots::setKindness(uint ammo) {
+    _kindness = kindness;
 };
 
-void Autobots::setWeapon(std::string weapon) {
-    _weapon = weapon;
+std::string Autobots::getDefence(){
+    return (_defence);
 };
 
-uint Autobots::getFuel() {
-    return (_fuel);
-};
-
-uint Autobots::getAmmo() {
-    return (_ammo);
-};
-
-std::string Autobots::getWeapon(){
-    return (_weapon);
+uint Autobots::getKindness() {
+    return (_kindness);
 };

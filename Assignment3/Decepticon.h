@@ -11,15 +11,10 @@ class Decepticons: public Transformers {
         bool roar();
         bool attack();
         bool mock();
-        void setFuel(uint fuel);
-        void setAmmo(uint ammo);
         void setWeapon(std::string weapon);
-        uint getFuel();
-        uint getAmmo();
         std::string getWeapon();        
     private:
         std::string _weapon = "gun";
-        uint _fuel = 0;
-        uint _ammo = 0;
+        uint cruelty = 10;
 };
 #endif

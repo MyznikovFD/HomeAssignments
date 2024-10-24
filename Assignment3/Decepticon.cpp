@@ -16,26 +16,18 @@ bool Decepticons::mock() {
     return true;
 };
 
-void Decepticons::setFuel(uint fuel) {
-    _fuel = fuel;
-};
-
-void Decepticons::setAmmo(uint ammo) {
-    _ammo = ammo;
-};
-
 void Decepticons::setWeapon(std::string weapon) {
     _weapon = weapon;
 };
 
-uint Decepticons::getFuel() {
-    return (_fuel);
-};
-
-uint Decepticons::getAmmo() {
-    return (_ammo);
+void Decepticons::setCruelty(uint ammo) {
+    _cruelty = cruelty;
 };
 
 std::string Decepticons::getWeapon(){
     return (_weapon);
+};
+
+uint Autobots::getCruelty() {
+    return (_cruelty);
 };
