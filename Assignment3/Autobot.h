@@ -12,9 +12,11 @@ class Autobots: public Transformers {
         bool defend();
         bool shame();
         void setDefence(std::string defence);
-        std::string getDefence();        
+        void setKindness(uint kindness);
+        std::string getDefence();
+        uint getKindness();
     private:
         std::string _defence = "shield";
-        uint cruelty = 10;
+        uint _kindness = 10;
 };
 #endif

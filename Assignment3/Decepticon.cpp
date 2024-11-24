@@ -20,7 +20,7 @@ void Decepticons::setWeapon(std::string weapon) {
     _weapon = weapon;
 };
 
-void Decepticons::setCruelty(uint ammo) {
+void Decepticons::setCruelty(uint cruelty) {
     _cruelty = cruelty;
 };
 
@@ -28,6 +28,6 @@ std::string Decepticons::getWeapon(){
     return (_weapon);
 };
 
-uint Autobots::getCruelty() {
+uint Decepticons::getCruelty() {
     return (_cruelty);
 };

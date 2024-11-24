@@ -1,33 +1,29 @@
-#include <iostream>
+#include <iostream>	
 #include "GodMaster.h"
 
 typedef unsigned int uint;
 
 
-bool GodMasters::roar() {
+bool GodMasters::toBeManaged() {
     return true;
 };
 
-bool GodMasters::defend() {
+bool GodMasters::toFight() {
     return true;
 };
 
-bool GodMasters::shame() {
-    return true;
-};
-
-void GodMasters::HavingPilot(std::string defence) {
+void GodMasters::setPilot(bool havingPilot) {
     _havingPilot = havingPilot;
 };
 
-void GodMasters::setHavingBracelets(uint ammo) {
+void GodMasters::setHavingBracelets(bool havingBracelets) {
     _havingBracelets = havingBracelets;
 };
 
-std::string GodMasters::getHavingPilot(){
+bool GodMasters::getHavingPilot(){
     return (_havingPilot);
 };
 
-uint GodMasters::getHavingBracelets() {
+bool GodMasters::getHavingBracelets() {
     return (_havingBracelets);
 };

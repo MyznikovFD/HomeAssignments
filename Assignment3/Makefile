@@ -1,20 +1,19 @@
+PROJECT=transf
+
 CXX=g++
-DEPS1=Transformer.h
-DEPS2=Decepticon.h
-DEPS3=Autobot.h
 
-transf: Autobot.o Decepticon.o Transformer.o
-	$(CXX) Autobot.o Decepticon.o Transformer.o -o transf;
+CFLAGS=-Werror -Wpedantic -Wall
 
-Autobot.o: Autobot.cpp $(DEPS3)
-	$(CXX) -c Autobot.cpp;
-	
-Decepticon.o: Decepticon.cpp $(DEPS2)
-	$(CXX) -c Decepticon.cpp;
+DEPS=Transformer.h Decepticon.h Autobot.h GodMaster.h
 
-Transformer.o: Decepticon.o $(DEPS1)
-	$(CXX) -c Transformer.cpp;
+OBJ=Transformer.o Decepticon.o Autobot.o  GodMaster.o
+
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CFLAGS)
+
+$(PROJECT): $(OBJ)
+	$(CXX)  $^ -o $(PROJECT)
+
 
 clean:
-	rm -f *.o *.gch transf;
-
+	rm -f *.o *.gch transf

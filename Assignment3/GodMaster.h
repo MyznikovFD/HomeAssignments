@@ -10,13 +10,12 @@ class GodMasters: public Transformers {
     public:
         bool toBeManaged();
         bool toFight();
-        bool shame();
-        void setPilot(bool a);
-        void setHavingBracelets(bool a);
+        void setPilot(bool havingPilot);
+        void setHavingBracelets(bool havingBracelets);
         bool getHavingBracelets();
         bool getHavingPilot();
     private:
-        bool havingPilot;
-        bool havingBracelets;
+        bool _havingPilot;
+        bool _havingBracelets;
 };
 #endif

@@ -4,15 +4,6 @@
 typedef unsigned int uint;
 
 int main() {
-    Transformers optimus;
-    std::cout << "Level: " << optimus.getLevel() << std::endl;
-    std::cout << "Strength: " << optimus.getStrength() << std::endl;
-    std::cout << "Range: " << optimus.getRange() << std::endl;
-    std::cout << "Fuel: " << optimus.getFuel() << std::endl;
-    std::cout << "Ammo: " << optimus.getAmmo() << std::endl;
-}
-
-Transformers::Transformers() {       
 
 }
 

@@ -1,12 +1,26 @@
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 #include <iostream>
+#include "Engine.cpp"
 
 typedef unsigned int uint;
 
 class Transformers {
+        uint _level;
+        uint _strength;
+        uint _range;
+        uint _fuel;
+        uint _ammo;
+        Guns _gun;
+        Engine _engine;
     public:
-        Transformers();
+        Transformers(Guns gun, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1, const uint& enginePower = 1 ):
+            _level(level), _strength(strength), _range(range), _fuel(fuel), _ammo(ammo), _gun(gun){
+            engine* = Engine(enginePower);
+            };
+        ~Transformers(){
+            delete gun;
+        };
         bool move();
         bool jump();
         bool fire();
@@ -22,11 +36,5 @@ class Transformers {
         uint getRange();
         uint getFuel();
         uint getAmmo();
-    private:
-        uint _level = 0;
-        uint _strength = 0;
-        uint _range = 0;
-        uint _fuel = 0;
-        uint _ammo = 0;
 };
 #endif

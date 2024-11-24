@@ -20,7 +20,7 @@ void Autobots::setDefence(std::string defence) {
     _defence = defence;
 };
 
-void Autobots::setKindness(uint ammo) {
+void Autobots::setKindness(uint kindness) {
     _kindness = kindness;
 };
 
