@@ -4,30 +4,37 @@
 typedef unsigned int uint;
 
 
-bool Autobots::roar() {
+bool Autobots::roar()
+{
     return true;
 };
 
-bool Autobots::defend() {
+bool Autobots::defend()
+{
     return true;
 };
 
-bool Autobots::shame() {
+bool Autobots::shame()
+{
     return true;
 };
 
-void Autobots::setDefence(std::string defence) {
+void Autobots::setDefence(std::string defence)
+{
     _defence = defence;
 };
 
-void Autobots::setKindness(uint kindness) {
+void Autobots::setKindness(uint kindness)
+{
     _kindness = kindness;
 };
 
-std::string Autobots::getDefence(){
+std::string Autobots::getDefence()
+{
     return (_defence);
 };
 
-uint Autobots::getKindness() {
+uint Autobots::getKindness()
+{
     return (_kindness);
 };

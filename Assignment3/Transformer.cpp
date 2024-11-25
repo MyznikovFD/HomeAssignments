@@ -3,68 +3,80 @@
 
 typedef unsigned int uint;
 
-int main() {
-
-}
 
 
-bool move() {
+bool move()
+{
     return true;
 };
 
-bool jump() {
+bool jump()
+{
     return true;
 };
 
-bool fire() {
+bool fire()
+{
     return true;
 };
 
-bool ultimate() {
+bool ultimate()
+{
     return true;
 };
 
-bool transform() {
+bool transform()
+{
     return true;
 };
 
-void Transformers::setStrength(uint strength) {
+void Transformers::setStrength(uint strength)
+{
     _strength = strength;
 };
 
-void Transformers::setLevel(uint level) {
+void Transformers::setLevel(uint level)
+{
     _level = level;
 };
 
-void Transformers::setRange(uint range) {
+void Transformers::setRange(uint range)
+{
     _range = range;
 };
 
-void Transformers::setFuel(uint fuel) {
+void Transformers::setFuel(uint fuel)
+{
     _fuel = fuel;
 };
 
-void Transformers::setAmmo(uint ammo) {
+void Transformers::setAmmo(uint ammo)
+{
     _ammo = ammo;
 };
 
 
-uint Transformers::getStrength() {
+uint Transformers::getStrength()
+{
     return (_strength);
 };
 
-uint Transformers::getLevel() {
+uint Transformers::getLevel()
+{
     return (_level);
 };
 
-uint Transformers::getRange() {
+uint Transformers::getRange()
+{
     return (_range);
 };
 
-uint Transformers::getFuel() {
+uint Transformers::getFuel()
+{
     return (_fuel);
 };
 
-uint Transformers::getAmmo() {
+uint Transformers::getAmmo()
+{
     return (_ammo);
 };

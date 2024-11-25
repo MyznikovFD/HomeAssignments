@@ -4,30 +4,37 @@
 typedef unsigned int uint;
 
 
-bool Decepticons::roar() {
+bool Decepticons::roar()
+{
     return true;
 };
 
-bool Decepticons::attack() {
+bool Decepticons::attack()
+{
     return true;
 };
 
-bool Decepticons::mock() {
+bool Decepticons::mock()
+{
     return true;
 };
 
-void Decepticons::setWeapon(std::string weapon) {
+void Decepticons::setWeapon(std::string weapon)
+{
     _weapon = weapon;
 };
 
-void Decepticons::setCruelty(uint cruelty) {
+void Decepticons::setCruelty(uint cruelty)
+{
     _cruelty = cruelty;
 };
 
-std::string Decepticons::getWeapon(){
+std::string Decepticons::getWeapon()
+{
     return (_weapon);
 };
 
-uint Decepticons::getCruelty() {
+uint Decepticons::getCruelty()
+{
     return (_cruelty);
 };
