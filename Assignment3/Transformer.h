@@ -9,20 +9,20 @@ typedef unsigned int uint;
 
 class Transformers
 {
+    Engine _engine;
     uint _level;
     uint _strength;
     uint _range;
     uint _fuel;
     uint _ammo;
     Guns _gun;
-    Engine _engine;
 public:
-    Transformers(Guns gun, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1, const uint enginePower = 1 ):
-        _level(level), _strength(strength), _range(range), _fuel(fuel), _ammo(ammo), _gun(gun), _engine(Engine(enginePower))
+    Transformers(Guns gun, const uint enginePower = 1, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1 ):
+        _engine(Engine(enginePower)), _level(level%10), _strength(strength%10), _range(range%10), _fuel(fuel%10), _ammo(ammo%10), _gun(gun)
     {};
     ~Transformers()
     {
-        delete &_gun;
+        delete &_engine;
     };
     bool move();
     bool jump();

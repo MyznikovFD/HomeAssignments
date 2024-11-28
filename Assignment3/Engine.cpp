@@ -6,6 +6,7 @@ class Engine
     uint _power;
 public:
     Engine(uint p):
-        _power(p) {};
+        _power(p%10) {};
+    ~Engine() {};
 };
 #endif

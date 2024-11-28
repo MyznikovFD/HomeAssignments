@@ -4,7 +4,6 @@
 typedef unsigned int uint;
 
 
-
 bool move()
 {
     return true;
@@ -32,27 +31,32 @@ bool transform()
 
 void Transformers::setStrength(uint strength)
 {
-    _strength = strength;
+    if (strength <= 10)
+        _strength = strength;
 };
 
 void Transformers::setLevel(uint level)
 {
-    _level = level;
+    if (level <= 10)
+        _level = level;
 };
 
 void Transformers::setRange(uint range)
 {
-    _range = range;
+    if (range <= 10)
+        _range = range;
 };
 
 void Transformers::setFuel(uint fuel)
 {
-    _fuel = fuel;
+    if (fuel <= 10)
+        _fuel = fuel;
 };
 
 void Transformers::setAmmo(uint ammo)
 {
-    _ammo = ammo;
+    if (ammo <= 10)
+        _ammo = ammo;
 };
 
 

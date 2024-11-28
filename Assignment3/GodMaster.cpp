@@ -4,11 +4,6 @@
 typedef unsigned int uint;
 
 
-bool GodMasters::toBeManaged()
-{
-    return true;
-};
-
 bool GodMasters::toFight()
 {
     return true;
@@ -33,3 +28,22 @@ bool GodMasters::getHavingBracelets()
 {
     return (_havingBracelets);
 };
+
+void GodMasters::setSpeed(uint a)
+    {
+    if (a <= 10)
+        GodMasters::_speed = a;
+    };
+void GodMasters::setSolidity(uint a)
+    {
+    if (a <= 10)
+        _solidity = a;
+    };
+uint GodMasters::getSpeed()
+    {
+    return _speed;
+    };
+uint GodMasters::getSolidity()
+    {
+    return _solidity;
+    };

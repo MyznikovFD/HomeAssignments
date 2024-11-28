@@ -13,11 +13,12 @@ public:
     bool attack();
     bool mock();
     void setCruelty(uint a);
-    void setWeapon(std::string weapon);
+    void setTrickery(uint a);
     uint getCruelty();
-    std::string getWeapon();
+    uint getTrickery();
+
 private:
-    std::string _weapon = "gun";
+    uint _trickery = 3;
     uint _cruelty = 10;
 };
 #endif

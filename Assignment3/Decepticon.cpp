@@ -19,19 +19,21 @@ bool Decepticons::mock()
     return true;
 };
 
-void Decepticons::setWeapon(std::string weapon)
+void Decepticons::setTrickery(uint trickery)
 {
-    _weapon = weapon;
+     if (trickery <= 10)
+        _trickery = trickery;
 };
 
 void Decepticons::setCruelty(uint cruelty)
 {
-    _cruelty = cruelty;
+    if (cruelty <= 10)
+       _cruelty = cruelty;
 };
 
-std::string Decepticons::getWeapon()
+uint Decepticons::getTrickery()
 {
-    return (_weapon);
+    return (_trickery);
 };
 
 uint Decepticons::getCruelty()

@@ -12,12 +12,12 @@ public:
     bool roar();
     bool defend();
     bool shame();
-    void setDefence(std::string defence);
+    void setWhoop(std::string defence);
     void setKindness(uint kindness);
-    std::string getDefence();
+    std::string getWhoop();
     uint getKindness();
 private:
-    std::string _defence = "shield";
+    std::string _whoop = "hurra";
     uint _kindness = 10;
 };
 #endif

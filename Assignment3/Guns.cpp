@@ -7,6 +7,7 @@ class Guns
     uint _fireRate;
 public:
     Guns(uint p, uint f):
-        _power(p), _fireRate(f) {};
+        _power(p%10), _fireRate(f%10) {};
+    ~Guns() {};
 };
 #endif
