@@ -9,6 +9,14 @@ typedef unsigned int uint;
 class GodMasters: public Transformers
 {
 public:
+    GodMasters(
+    Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const uint& speed = 5, const uint& solidity = 5 ):
+        Transformers(gun, enginePower, level, strength, range, fuel, ammo)
+    {
+        _speed = speed;
+        _solidity = solidity;
+    };
+    ~GodMasters() {};
     bool toFight();
     void setPilot(bool havingPilot);
     void setHavingBracelets(bool havingBracelets);

@@ -10,7 +10,7 @@ class Autobots: public Transformers
 {
 public:
     Autobots(
-        Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const std::string whoop = "hurra", const uint& kindness = 10 ):
+    Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const std::string whoop = "hurra", const uint& kindness = 10 ):
         Transformers(gun, enginePower, level, strength, range, fuel, ammo)
     {
         _whoop = whoop;

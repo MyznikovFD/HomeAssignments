@@ -10,7 +10,7 @@ class Decepticons: public Transformers
 {
 public:
     Decepticons(
-        Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const uint& trickery = 3, const uint& cruelty = 10 ):
+    Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const uint& trickery = 3, const uint& cruelty = 10 ):
         Transformers(gun, enginePower, level, strength, range, fuel, ammo)
     {
         _cruelty = cruelty;

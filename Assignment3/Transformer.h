@@ -17,8 +17,8 @@ class Transformers
     uint _ammo;
     Guns _gun;
 public:
-    Transformers(Guns gun, const uint enginePower = 1, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1 ):
-        _engine(Engine(enginePower)), _level(level%10), _strength(strength%10), _range(range%10), _fuel(fuel%10), _ammo(ammo%10), _gun(gun)
+    Transformers(Guns gun, const uint& enginePower = 1, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1 ):
+        _engine(Engine(enginePower%10)), _level(level%10), _strength(strength%10), _range(range%10), _fuel(fuel%10), _ammo(ammo%10), _gun(gun)
     {};
     ~Transformers()
     {
