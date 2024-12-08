@@ -21,14 +21,12 @@ bool Decepticons::mock()
 
 void Decepticons::setTrickery(uint trickery)
 {
-     if (trickery <= 10)
-        _trickery = trickery;
+    _trickery = trickery%10;
 };
 
 void Decepticons::setCruelty(uint cruelty)
 {
-    if (cruelty <= 10)
-       _cruelty = cruelty;
+    _cruelty = cruelty%10;
 };
 
 uint Decepticons::getTrickery()

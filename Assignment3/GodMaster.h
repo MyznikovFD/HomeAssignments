@@ -9,27 +9,20 @@ typedef unsigned int uint;
 class GodMasters: public Transformers
 {
 public:
-    GodMasters(
-    Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const uint& speed = 5, const uint& solidity = 5 ):
-        Transformers(gun, enginePower, level, strength, range, fuel, ammo)
-    {
-        _speed = speed;
-        _solidity = solidity;
-    };
+    GodMasters(const uint& strength, const uint& fuel, const uint& ammo, Guns* gun, const uint& enginePower = 90, const bool& havePilot = false, const bool& haveBracelets = false, const uint& solidity = 100):
+    Transformers(gun, enginePower, strength, fuel, ammo), _havePilot(havePilot), _haveBracelets(haveBracelets), _solidity(solidity%101) 
+    {}; 
     ~GodMasters() {};
     bool toFight();
-    void setPilot(bool havingPilot);
-    void setHavingBracelets(bool havingBracelets);
-    bool getHavingBracelets();
-    bool getHavingPilot();
-    void setSpeed(uint a);
+    void setPilot(bool havePilot);
+    void setHaveBracelets(bool haveBracelets);
+    bool getHaveBracelets();
+    bool getHavePilot();
     void setSolidity(uint a);
-    uint getSpeed();
     uint getSolidity();
 private:
-    bool _havingPilot;
-    bool _havingBracelets;
-    uint _speed;
+    bool _havePilot;
+    bool _haveBracelets;
     uint _solidity;
 
 };

@@ -9,17 +9,18 @@ typedef unsigned int uint;
 
 class Transformers
 {
-    Engine _engine;
-    uint _level;
+    Engine* _engine;
+    Guns* _gun;
     uint _strength;
-    uint _range;
     uint _fuel;
     uint _ammo;
-    Guns _gun;
 public:
-    Transformers(Guns gun, const uint& enginePower = 1, const uint& level = 1, const uint& strength = 1, const uint& range = 1, const uint& fuel = 1, const uint& ammo = 1 ):
-        _engine(Engine(enginePower%10)), _level(level%10), _strength(strength%10), _range(range%10), _fuel(fuel%10), _ammo(ammo%10), _gun(gun)
-    {};
+    Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
+        _strength(strength%101), _fuel(fuel%101), _ammo(ammo%101)
+    {
+        _gun = gun;
+        _engine = new Engine(enginePower%101); 
+    };
     ~Transformers()
     {
         delete &_engine;
@@ -29,14 +30,15 @@ public:
     bool fire();
     bool ultimate();
     bool transform();
+    void setEngine(uint engine);
+    void setGun(uint power, uint fireRate);
     void setStrength(uint strength);
-    void setLevel(uint level);
-    void setRange(uint range);
     void setFuel(uint fuel);
     void setAmmo(uint ammo);
+    uint getEnginePower();
+    uint getGunFireRate();
+    uint getGunPower();
     uint getStrength();
-    uint getLevel();
-    uint getRange();
     uint getFuel();
     uint getAmmo();
 };

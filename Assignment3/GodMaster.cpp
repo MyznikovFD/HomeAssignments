@@ -9,40 +9,31 @@ bool GodMasters::toFight()
     return true;
 };
 
-void GodMasters::setPilot(bool havingPilot)
+void GodMasters::setPilot(bool havePilot)
 {
-    _havingPilot = havingPilot;
+    _havePilot = havePilot;
 };
 
-void GodMasters::setHavingBracelets(bool havingBracelets)
+void GodMasters::setHaveBracelets(bool haveBracelets)
 {
-    _havingBracelets = havingBracelets;
+    _haveBracelets = haveBracelets;
 };
 
-bool GodMasters::getHavingPilot()
+bool GodMasters::getHavePilot()
 {
-    return (_havingPilot);
+    return (_havePilot);
 };
 
-bool GodMasters::getHavingBracelets()
+bool GodMasters::getHaveBracelets()
 {
-    return (_havingBracelets);
+    return (_haveBracelets);
 };
 
-void GodMasters::setSpeed(uint a)
-    {
-    if (a <= 10)
-        GodMasters::_speed = a;
-    };
 void GodMasters::setSolidity(uint a)
     {
-    if (a <= 10)
-        _solidity = a;
+    _solidity = a%10;
     };
-uint GodMasters::getSpeed()
-    {
-    return _speed;
-    };
+
 uint GodMasters::getSolidity()
     {
     return _solidity;

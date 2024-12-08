@@ -26,8 +26,7 @@ void Autobots::setWhoop(std::string whoop)
 
 void Autobots::setKindness(uint kindness)
 {
-    if (kindness <= 10)
-        _kindness = kindness;
+    _kindness = kindness%10;
 };
 
 std::string Autobots::getWhoop()

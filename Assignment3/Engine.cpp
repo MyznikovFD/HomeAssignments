@@ -5,8 +5,12 @@ class Engine
 {
     uint _power;
 public:
-    Engine(uint p):
-        _power(p%10) {};
+    Engine(const uint& p = 10):
+        _power(p%101) {};
     ~Engine() {};
+    uint getPower()
+    {
+        return _power;
+    };
 };
 #endif

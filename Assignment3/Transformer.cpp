@@ -31,33 +31,29 @@ bool transform()
 
 void Transformers::setStrength(uint strength)
 {
-    if (strength <= 10)
-        _strength = strength;
+    _strength = strength%101;
 };
 
-void Transformers::setLevel(uint level)
+void Transformers::setGun(uint power, uint fireRate)
 {
-    if (level <= 10)
-        _level = level;
+    _gun = new Guns(power, fireRate); 
 };
 
-void Transformers::setRange(uint range)
+void Transformers::setEngine(uint power)
 {
-    if (range <= 10)
-        _range = range;
+    _engine = new Engine(power);
 };
 
 void Transformers::setFuel(uint fuel)
 {
-    if (fuel <= 10)
-        _fuel = fuel;
+    _fuel = fuel%101;
 };
 
 void Transformers::setAmmo(uint ammo)
 {
-    if (ammo <= 10)
-        _ammo = ammo;
+    _ammo = ammo%101;
 };
+
 
 
 uint Transformers::getStrength()
@@ -65,14 +61,19 @@ uint Transformers::getStrength()
     return (_strength);
 };
 
-uint Transformers::getLevel()
+uint Transformers::getGunPower()
 {
-    return (_level);
+    return _gun->getPower(); 
 };
 
-uint Transformers::getRange()
+uint Transformers::getGunFireRate()
 {
-    return (_range);
+    return _gun->getFireRate(); 
+};
+
+uint Transformers::getEnginePower()
+{
+    return _engine->getPower();
 };
 
 uint Transformers::getFuel()

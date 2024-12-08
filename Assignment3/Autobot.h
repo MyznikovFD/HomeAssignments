@@ -9,23 +9,19 @@ typedef unsigned int uint;
 class Autobots: public Transformers
 {
 public:
-    Autobots(
-        Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const std::string whoop = "hurra", const uint& kindness = 10 ):
-        Transformers(gun, enginePower, level, strength, range, fuel, ammo)
-    {
-        _whoop = whoop;
-        _kindness = kindness;
-    };
+    Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
+    Transformers(gun, enginePower, strength, fuel, ammo), _whoop(whoop), _kindness(kindness%101)
+    {}; 
     ~Autobots() {};
     bool roar();
     bool defend();
     bool shame();
-    void setWhoop(std::string defence);
+    void setWhoop(std::string whoop);
     void setKindness(uint kindness);
     std::string getWhoop();
     uint getKindness();
 private:
     std::string _whoop = "hurra";
-    uint _kindness;
+    uint _kindness = 100;
 };
 #endif

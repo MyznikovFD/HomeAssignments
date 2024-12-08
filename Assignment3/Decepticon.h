@@ -9,13 +9,9 @@ typedef unsigned int uint;
 class Decepticons: public Transformers
 {
 public:
-    Decepticons(
-        Guns gun, const uint& enginePower, const uint& level, const uint& strength, const uint& range, const uint& fuel, const uint& ammo, const uint& trickery = 3, const uint& cruelty = 10 ):
-        Transformers(gun, enginePower, level, strength, range, fuel, ammo)
-    {
-        _cruelty = cruelty;
-        _trickery = trickery;
-    };
+    Decepticons(const uint& trickery, const uint& cruelty, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
+    Transformers(gun, enginePower, strength, fuel, ammo), _trickery(trickery%101), _cruelty(cruelty%101)
+    {}; 
     ~Decepticons() {};
     bool roar();
     bool attack();
@@ -26,7 +22,7 @@ public:
     uint getTrickery();
 
 private:
-    uint _trickery;
-    uint _cruelty;
+    uint _trickery = 30;
+    uint _cruelty = 80;
 };
 #endif
