@@ -15,16 +15,8 @@ class Transformers
     uint _fuel;
     uint _ammo;
 public:
-    Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
-        _strength(strength%101), _fuel(fuel%101), _ammo(ammo%101)
-    {
-        _gun = gun;
-        _engine = new Engine(enginePower%101); 
-    };
-    ~Transformers()
-    {
-        delete &_engine;
-    };
+    Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
+    virtual ~Transformers();
     bool move();
     bool jump();
     bool fire();

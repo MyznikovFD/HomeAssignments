@@ -6,7 +6,7 @@ class Engine
     uint _power;
 public:
     Engine(const uint& p = 10):
-        _power(p%101) {};
+        _power(p%100) {};
     ~Engine() {};
     uint getPower()
     {

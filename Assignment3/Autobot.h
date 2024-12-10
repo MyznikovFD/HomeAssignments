@@ -9,10 +9,8 @@ typedef unsigned int uint;
 class Autobots: public Transformers
 {
 public:
-    Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
-    Transformers(gun, enginePower, strength, fuel, ammo), _whoop(whoop), _kindness(kindness%101)
-    {}; 
-    ~Autobots() {};
+    Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
+    ~Autobots();
     bool roar();
     bool defend();
     bool shame();
@@ -22,6 +20,6 @@ public:
     uint getKindness();
 private:
     std::string _whoop = "hurra";
-    uint _kindness = 100;
+    uint _kindness = 99;
 };
 #endif
