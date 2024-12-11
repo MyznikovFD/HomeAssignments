@@ -1,11 +1,12 @@
+#include <string>
 #include <iostream>
 #include "Autobot.h"
 
 typedef unsigned int uint;
 
 Autobots::Autobots() {};
-Autobots::Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
-    Transformers(gun, enginePower, strength, fuel, ammo), _whoop(whoop), _kindness(kindness%100)
+Autobots::Autobots(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& kindness = 99, const std::string& whoop = "Hurra!"):
+    Transformers(gun, enginePower, strength, fuel, ammo), _kindness(kindness%100), _whoop(whoop)
 {};
 Autobots::~Autobots() {};
 

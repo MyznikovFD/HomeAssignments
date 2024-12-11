@@ -1,3 +1,4 @@
+#include <string>
 #include <iostream>
 #include <gtest/gtest.h>
 
@@ -37,7 +38,7 @@ TEST(engine, engineConstructor)
     delete engine3;
 };
 
-TEST(transformers, transformersConstructor)
+TEST(transformers, Constructor)
 {   
     Guns* gun = new Guns(599, 89);
     Transformers* transformer = new Transformers(gun, 787, 34, 0, 9999);
@@ -68,6 +69,46 @@ TEST(transformers, SettersGetters)
     EXPECT_EQ(tr.getStrength(), 0);
     EXPECT_EQ(tr.getFuel(), 1);
     EXPECT_EQ(tr.getAmmo(), 999);
+};
+
+TEST(autobots, Constructor)
+{   
+    Guns* gun = new Guns(599, 89);
+    Autobots* autobot = new Autobots(gun, 898, 899, 900, 901, 897, "hurra");
+
+    EXPECT_EQ(autobot->getKindness(), 97);
+    EXPECT_EQ(autobot->getWhoop(), "hurra");
+    EXPECT_EQ(autobot->getGunPower(), 99);
+    EXPECT_EQ(autobot->getGunFireRate(), 89);
+    EXPECT_EQ(autobot->getEnginePower(), 98);
+    EXPECT_EQ(autobot->getStrength(), 99);
+    EXPECT_EQ(autobot->getFuel(), 0);
+    EXPECT_EQ(autobot->getAmmo(), 901);
+    delete autobot;
+    delete gun;
+};
+
+TEST(autobots, SettersGetters)
+{   
+    Guns* gun = new Guns();
+    Autobots aut;
+    aut.setGun(gun);
+    aut.setEngine(0);
+    aut.setAmmo(999);
+    aut.setStrength(100);
+    aut.setFuel(101);
+    aut.setKindness(6);
+    aut.setWhoop("rrr");
+    
+    EXPECT_EQ(aut.getGunFireRate(), 10);
+    EXPECT_EQ(aut.getGunPower(), 10);
+    EXPECT_EQ(aut.getEnginePower(), 0);
+    EXPECT_EQ(aut.getStrength(), 0);
+    EXPECT_EQ(aut.getFuel(), 1);
+    EXPECT_EQ(aut.getAmmo(), 999);
+    EXPECT_EQ(aut.getKindness(), 6);
+    EXPECT_EQ(aut.getWhoop(), "rrr");
+    
 };
 
 int main(int argc, char **argv)

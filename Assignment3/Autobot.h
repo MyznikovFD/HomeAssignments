@@ -10,7 +10,7 @@ class Autobots: public Transformers
 {
 public:
     Autobots();
-    Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
+    Autobots(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& kindness, const std::string& whoop);
     ~Autobots();
     bool roar();
     bool defend();
@@ -20,7 +20,7 @@ public:
     std::string getWhoop();
     uint getKindness();
 private:
-    std::string _whoop = "hurra";
-    uint _kindness = 99;
+    uint _kindness;
+    std::string _whoop;
 };
 #endif
