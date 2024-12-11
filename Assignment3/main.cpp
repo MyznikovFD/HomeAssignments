@@ -52,6 +52,23 @@ TEST(transformers, transformersConstructor)
     delete gun;
 };
 
+TEST(transformers, SettersGetters)
+{   
+    Guns* gun = new Guns();
+    Transformers tr;
+    tr.setGun(gun);
+    tr.setEngine(0);
+    tr.setAmmo(999);
+    tr.setStrength(100);
+    tr.setFuel(101);
+    
+    EXPECT_EQ(tr.getGunFireRate(), 10);
+    EXPECT_EQ(tr.getGunPower(), 10);
+    EXPECT_EQ(tr.getEnginePower(), 0);
+    EXPECT_EQ(tr.getStrength(), 0);
+    EXPECT_EQ(tr.getFuel(), 1);
+    EXPECT_EQ(tr.getAmmo(), 999);
+};
 
 int main(int argc, char **argv)
 {

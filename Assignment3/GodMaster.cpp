@@ -4,6 +4,7 @@
 typedef unsigned int uint;
 
 
+GodMasters::GodMasters() {};
 GodMasters::GodMasters(const uint& strength, const uint& fuel, const uint& ammo, Guns* gun, const uint& enginePower, const bool& havePilot, const bool& haveBracelets, const uint& solidity):
     Transformers(gun, enginePower, strength, fuel, ammo), _havePilot(havePilot), _haveBracelets(haveBracelets), _solidity(solidity%100)
 {};

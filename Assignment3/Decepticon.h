@@ -9,6 +9,7 @@ typedef unsigned int uint;
 class Decepticons: public Transformers
 {
 public:
+    Decepticons();
     Decepticons(const uint& trickery, const uint& cruelty, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
     ~Decepticons();
     bool roar();

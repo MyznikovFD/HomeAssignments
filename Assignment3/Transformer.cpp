@@ -3,6 +3,8 @@
 
 typedef unsigned int uint;
 
+Transformers::Transformers() {};
+
 Transformers::Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
     _gun(gun) ,_strength(strength%100), _fuel(fuel%100), _ammo(ammo)
 {
@@ -43,9 +45,9 @@ void Transformers::setStrength(uint strength)
     _strength = strength%100;
 };
 
-void Transformers::setGun(uint power, uint fireRate)
+void Transformers::setGun(Guns* gun)
 {
-    Guns _gun(power, fireRate);
+    _gun = gun;
 };
 
 void Transformers::setEngine(uint power)

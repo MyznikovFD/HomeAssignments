@@ -3,6 +3,7 @@
 
 typedef unsigned int uint;
 
+Autobots::Autobots() {};
 Autobots::Autobots(const uint& kindness, const std::string& whoop, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
     Transformers(gun, enginePower, strength, fuel, ammo), _whoop(whoop), _kindness(kindness%100)
 {};

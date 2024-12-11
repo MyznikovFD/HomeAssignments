@@ -15,6 +15,7 @@ class Transformers
     uint _fuel;
     uint _ammo;
 public:
+    Transformers();
     Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
     virtual ~Transformers();
     bool move();
@@ -22,8 +23,8 @@ public:
     bool fire();
     bool ultimate();
     bool transform();
-    void setEngine(uint engine);
-    void setGun(uint power, uint fireRate);
+    void setEngine(uint power);
+    void setGun(Guns* gun);
     void setStrength(uint strength);
     void setFuel(uint fuel);
     void setAmmo(uint ammo);
