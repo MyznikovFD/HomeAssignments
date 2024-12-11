@@ -10,11 +10,6 @@ Autobots::Autobots(Guns* gun, const uint& enginePower, const uint& strength, con
 {};
 Autobots::~Autobots() {};
 
-bool Autobots::roar()
-{
-    return true;
-};
-
 bool Autobots::defend()
 {
     return true;
@@ -35,7 +30,7 @@ void Autobots::setKindness(uint kindness)
     _kindness = kindness%100;
 };
 
-std::string Autobots::getWhoop()
+std::string Autobots::roar()
 {
     return (_whoop);
 };

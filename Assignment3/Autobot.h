@@ -12,12 +12,11 @@ public:
     Autobots();
     Autobots(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& kindness, const std::string& whoop);
     ~Autobots();
-    bool roar();
     bool defend();
     bool shame();
     void setWhoop(std::string whoop);
     void setKindness(uint kindness);
-    std::string getWhoop();
+    std::string roar();
     uint getKindness();
 private:
     uint _kindness;

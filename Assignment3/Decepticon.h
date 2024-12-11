@@ -10,7 +10,7 @@ class Decepticons: public Transformers
 {
 public:
     Decepticons();
-    Decepticons(const uint& trickery, const uint& cruelty, Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
+    Decepticons(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& trickery, const uint& cruelty);
     ~Decepticons();
     bool roar();
     bool attack();
@@ -21,7 +21,7 @@ public:
     uint getTrickery();
 
 private:
-    uint _trickery = 30;
-    uint _cruelty = 80;
+    uint _trickery;
+    uint _cruelty;
 };
 #endif

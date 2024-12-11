@@ -5,7 +5,7 @@ typedef unsigned int uint;
 
 
 GodMasters::GodMasters() {};
-GodMasters::GodMasters(const uint& strength, const uint& fuel, const uint& ammo, Guns* gun, const uint& enginePower, const bool& havePilot, const bool& haveBracelets, const uint& solidity):
+GodMasters::GodMasters(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const bool& havePilot, const bool& haveBracelets, const uint& solidity):
     Transformers(gun, enginePower, strength, fuel, ammo), _havePilot(havePilot), _haveBracelets(haveBracelets), _solidity(solidity%100)
 {};
 GodMasters::~GodMasters() {};
@@ -15,7 +15,7 @@ bool GodMasters::toFight()
     return true;
 };
 
-void GodMasters::setPilot(bool havePilot)
+void GodMasters::setHavePilot(bool havePilot)
 {
     _havePilot = havePilot;
 };
