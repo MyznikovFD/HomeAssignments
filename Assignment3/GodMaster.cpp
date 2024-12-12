@@ -10,7 +10,12 @@ GodMasters::GodMasters(Guns* gun, const uint& enginePower, const uint& strength,
 {};
 GodMasters::~GodMasters() {};
 
-bool GodMasters::toFight()
+bool GodMasters::fight()
+{
+    return true;
+};
+
+bool GodMasters::dance()
 {
     return true;
 };

@@ -12,7 +12,6 @@ public:
     Decepticons();
     Decepticons(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& trickery, const uint& cruelty);
     ~Decepticons();
-    bool roar();
     bool attack();
     bool mock();
     void setCruelty(uint a);

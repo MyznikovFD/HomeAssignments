@@ -12,7 +12,8 @@ public:
     GodMasters();
     GodMasters(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const bool& havePilot = false, const bool& haveBracelets = false, const uint& solidity = 99);
     ~GodMasters();
-    bool toFight();
+    bool fight();
+    bool dance();
     void setHavePilot(bool havePilot);
     void setHaveBracelets(bool haveBracelets);
     bool getHaveBracelets();

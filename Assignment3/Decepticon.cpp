@@ -9,11 +9,6 @@ Decepticons::Decepticons(Guns* gun, const uint& enginePower, const uint& strengt
 {};
 Decepticons::~Decepticons() {};
 
-bool Decepticons::roar()
-{
-    return true;
-};
-
 bool Decepticons::attack()
 {
     return true;
