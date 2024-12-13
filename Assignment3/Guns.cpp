@@ -1,3 +1,8 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
+
 #ifndef GUNS_CPP
 #define GUNS_CPP
 typedef unsigned int uint;

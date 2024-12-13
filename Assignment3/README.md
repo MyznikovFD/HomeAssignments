@@ -10,4 +10,8 @@ Tests are in file with appropriate names.
 ## Build
 make
 ## Run
-./transf
+./transformer
+## Build test
+make test
+## Run test
+./test-transformer

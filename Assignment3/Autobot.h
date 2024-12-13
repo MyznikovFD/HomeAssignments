@@ -1,3 +1,7 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 #include <iostream>

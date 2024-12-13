@@ -1,3 +1,7 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
 #ifndef ENGINE_CPP
 #define ENGINE_CPP
 typedef unsigned int uint;

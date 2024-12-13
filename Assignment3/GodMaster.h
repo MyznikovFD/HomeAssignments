@@ -1,3 +1,8 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
+
 #ifndef GODMASTER_H
 #define GODMASTER_H
 #include <iostream>

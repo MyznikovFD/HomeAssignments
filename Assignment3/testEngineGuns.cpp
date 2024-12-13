@@ -10,6 +10,10 @@ TEST(guns, gunsConstructor)
     EXPECT_EQ(gun->getPower(), 99);
     EXPECT_EQ(gun->getFireRate(), 89);
     delete gun;
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
 
     Guns gun1;
     EXPECT_EQ(gun1.getPower(), 10);

@@ -1,20 +1,54 @@
-PROJECT=transf
+PROJECT = transformer
 
-CXX=g++
+LIBPROJECT = $(PROJECT).a
 
-CFLAGS=-Werror -Wpedantic -Wall
+TESTPROJECT = test-$(PROJECT)
 
-DEPS=Transformer.h Decepticon.h Autobot.h GodMaster.h
+CXX = g++
 
-OBJ=Transformer.o Decepticon.o Autobot.o GodMaster.o Engine.o Guns.o testEngineGuns.o testTransformer.o testDecepticon.o testAutobot.o testGodMaster.o testEngineGuns.o main.o
+	A = ar
+
+AFLAGS = rsv
+
+CCXFLAGS = -I. -std=c++17 -Werror -Wpedantic -Wall -g -fPIC
+
+LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+
+LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+
+DEPS=$(wildcard *.h)
+
+OBJ=Transformer.o Decepticon.o Autobot.o GodMaster.o Engine.o Guns.o
+
+TEST-OBJ=testTransformer.o testDecepticon.o testAutobot.o testGodMaster.o testEngineGuns.o
+
+.PHONY: default
+
+default: all;
 
 %.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< $(CFLAGS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+$(LIBPROJECT): $(OBJ)
+	$(A) $(AFLAGS) $@ $^
+
+$(PROJECT): main.o $(LIBPROJECT)
+	$(CXX) -o $@ main.o $(LDXXFLAGS)
 
 
-$(PROJECT): $(OBJ)
-	$(CXX)  $^ -o $(PROJECT) -lgtest -lgmock -pthread
+$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
+	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
 
+test: $(TESTPROJECT)
+
+all: $(PROJECT)
+
+.PHONY: clean
 
 clean:
-	rm -f *.o *.gch transf
+	rm -f *.o
+
+cleanall: clean
+	rm -f $(PROJECT)
+	rm -f $(LIBPROJECT)
+	rm -f $(TESTPROJECT)

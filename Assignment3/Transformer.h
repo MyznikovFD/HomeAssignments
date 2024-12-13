@@ -1,3 +1,8 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment3
+
+
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 #include <iostream>
