@@ -4,6 +4,6 @@
 
 st129282@student.spbu.ru
 
-Сборка `make` или `rever`
+Build `make`
 
-Запуск `./rever`
+Run `./rever`
