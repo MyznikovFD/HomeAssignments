@@ -55,3 +55,27 @@ TEST(autobots, Methods)
     EXPECT_EQ(aut.defend(), true);
     EXPECT_EQ(aut.shame(), true);
 };
+
+TEST(autobots, overloading)
+{
+    Guns* gun = new Guns(500, 101);
+    Autobots tr = Autobots(gun, 898, 899, 900, 901, 897, "hurra");
+    std::ostringstream oss;
+    oss << tr;
+    std::string instance = "Information about transformer:\nGun Firerate: 1\nGun power: 0\nAmmo: 901\nEngine power: 98\nStrength: 99\nFuel: 0\n";
+    EXPECT_EQ(oss.str(), instance);
+    delete gun;
+    
+    Guns* gun1 = new Guns(599, 101);
+    Autobots* tran1 = new Autobots(gun1, 898, 899, 900, 901, 897, "hurra");
+    
+    Guns* gun2 = new Guns(50, 50);
+    Autobots* tran2 = new Autobots(gun2, 50, 16550, 50, 2134550, 901, "hurra");
+    
+    ASSERT_TRUE(tran2 < tran1);
+    ASSERT_TRUE(tran1 > tran2);
+    delete tran1;
+    delete gun1;
+    delete tran2;
+    delete gun2;
+};

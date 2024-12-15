@@ -46,4 +46,5 @@ public:
     uint getFuel();
     uint getAmmo();
 };
+std::ostream& operator<<(std::ostream& oss, Transformers& tr);
 #endif

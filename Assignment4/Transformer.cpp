@@ -2,13 +2,14 @@
 //st129282@@student.spbu.ru
 //Assignment3
 
-
+#include <ostream>
 #include <iostream>
+#include <string>
 #include "Transformer.h"
 
 typedef unsigned int uint;
 
-Transformers::Transformers()
+Transformers::Transformers(): _gun(NULL),_strength(0), _fuel(0), _ammo(0)
 {
     _engine = new Engine();
 };
@@ -115,4 +116,10 @@ uint Transformers::getFuel()
 uint Transformers::getAmmo()
 {
     return (_ammo);
+};
+
+std::ostream& operator<<(std::ostream& oss, Transformers& tr)
+{
+    oss << "Information about transformer:" << "\n" << "Gun Firerate: " << tr.getGunFireRate() << "\n" << "Gun power: " << tr.getGunPower() << "\n" << "Ammo: " << tr.getAmmo() << "\n" << "Engine power: " << tr.getEnginePower() << "\n" << "Strength: " << tr.getStrength() << "\n" << "Fuel: " << tr.getFuel() << std::endl;
+    return oss;
 };
