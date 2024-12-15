@@ -1,6 +1,6 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
-//Assignment3
+//Assignment4
 
 #ifndef ENGINE_CPP
 #define ENGINE_CPP

@@ -1,8 +1,12 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment4
+//target - to test behaviour default constructors
+
 #include <iostream>
 #include <gtest/gtest.h>
 
 #include "Decepticon.h"
-//target - to test behaviour default constructors
 
 TEST(decepticons, Constructor)
 {

@@ -1,3 +1,6 @@
+//Myznikov Fedor Denisovich
+//st129282@@student.spbu.ru
+//Assignment4
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 #include <iostream>
