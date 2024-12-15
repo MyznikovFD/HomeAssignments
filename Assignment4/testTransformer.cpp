@@ -1,6 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
+//target - to test behaviour reloaded functions
 
 #include <iostream>
 #include <ostream>
@@ -57,6 +58,8 @@ TEST(transformers, Methods)
     delete gun1;
 };
 
+
+//reloaded functions
 TEST(transformers, overloading)
 {
     Guns* gun = new Guns(599, 89);

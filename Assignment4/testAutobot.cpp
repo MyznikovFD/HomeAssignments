@@ -1,6 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
+//target - to test behaviour reloaded functions
 
 #include <string>
 #include <iostream>
@@ -56,6 +57,9 @@ TEST(autobots, Methods)
     EXPECT_EQ(aut.shame(), true);
 };
 
+//reloaded functions
+//
+
 TEST(autobots, overloading)
 {
     Guns* gun = new Guns(500, 101);
@@ -65,6 +69,8 @@ TEST(autobots, overloading)
     std::string instance = "Information about transformer:\nGun Firerate: 1\nGun power: 0\nAmmo: 901\nEngine power: 98\nStrength: 99\nFuel: 0\n";
     EXPECT_EQ(oss.str(), instance);
     delete gun;
+   
+   
     
     Guns* gun1 = new Guns(599, 101);
     Autobots* tran1 = new Autobots(gun1, 898, 899, 900, 901, 897, "hurra");
