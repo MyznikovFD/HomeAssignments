@@ -1,7 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
-
+//target - explore overloading
 
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
@@ -23,22 +23,22 @@ public:
     Transformers();
     Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
     virtual ~Transformers();
-    
+
     bool operator>(Transformers* other);
     bool operator<(Transformers* other);
-    
+
     bool move();
     bool jump();
     bool fire();
     bool ultimate();
     bool transform();
-    
+
     void setEngine(uint power);
     void setGun(Guns* gun);
     void setStrength(uint strength);
     void setFuel(uint fuel);
     void setAmmo(uint ammo);
-    
+
     uint getEnginePower();
     uint getGunFireRate();
     uint getGunPower();
@@ -48,3 +48,5 @@ public:
 };
 std::ostream& operator<<(std::ostream& oss, Transformers& tr);
 #endif
+
+

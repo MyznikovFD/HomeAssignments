@@ -1,7 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
-//target - to exlore reloading of functions
+//target - to exlore overloading of functions
 
 
 #include <ostream>
@@ -27,18 +27,18 @@ Transformers::~Transformers()
 };
 
 
-//reloaded function
+//overloaded function
 std::ostream& operator<<(std::ostream& oss, Transformers& tr)
 {
     oss << "Information about transformer:" << "\n" << "Gun Firerate: " << tr.getGunFireRate() << "\n" << "Gun power: " << tr.getGunPower() << "\n" << "Ammo: " << tr.getAmmo() << "\n" << "Engine power: " << tr.getEnginePower() << "\n" << "Strength: " << tr.getStrength() << "\n" << "Fuel: " << tr.getFuel() << std::endl;
     return oss;
 };
-//reloaded function
+//overloaded function
 bool Transformers::operator>(Transformers* other)
 {
     return (this->getStrength() > other->getStrength());
 };
-//reloaded function
+//overloaded function
 bool Transformers::operator<(Transformers* other)
 {
     return (this->getStrength() < other->getStrength());

@@ -4,9 +4,11 @@
 ## Contacts
 st129282@stdudent.spbu.ru
 ## Description
-Home assingment 3 - classes Transformers, Autobot, Decepticons, GodMasters.
+Home assingment 4 - classes Transformers, Autobot, Decepticons, GodMasters.
 Associated class Guns. Composed class Engine.
 Tests are in file with appropriate names.
+Default constructors for every class.
+Overloaded <, >, <<
 ## Build
 make
 ## Run

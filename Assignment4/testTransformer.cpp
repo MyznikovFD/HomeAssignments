@@ -1,7 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
-//target - to test behaviour reloaded functions
+//target - to test behaviour overloaded functions
 
 #include <iostream>
 #include <ostream>
@@ -17,7 +17,7 @@ TEST(transformers, Constructor)
     EXPECT_EQ(tr.getStrength(), 10);
     EXPECT_EQ(tr.getFuel(), 10);
     EXPECT_EQ(tr.getAmmo(), 10);
-    
+
 
     Guns* gun = new Guns(599, 89);
     Transformers* transformer = new Transformers(gun, 787, 34, 0, 9999);
@@ -31,7 +31,7 @@ TEST(transformers, Constructor)
     delete transformer;
     delete gun;
 
-    
+
 };
 
 TEST(transformers, SettersGetters)
@@ -61,14 +61,14 @@ TEST(transformers, Methods)
     ASSERT_TRUE(tran1->fire());
     ASSERT_TRUE(tran1->ultimate());
     ASSERT_TRUE(tran1->transform());
-    
-    
+
+
     delete tran1;
     delete gun1;
 };
 
 
-//reloaded functions
+//overloaded functions
 TEST(transformers, overloading)
 {
     Guns* gun = new Guns(599, 89);
@@ -76,16 +76,16 @@ TEST(transformers, overloading)
     std::ostringstream oss;
     oss << tr;
     std::string instance = "Information about transformer:\nGun Firerate: 89\nGun power: 99\nAmmo: 9999\nEngine power: 87\nStrength: 34\nFuel: 0\n";
-   
+
     EXPECT_EQ(oss.str(), instance);
     delete gun;
-    
+
     Guns* gun1 = new Guns(599, 89);
     Transformers* tran1 = new Transformers(gun1, 787, 234, 0, 9999);
-    
+
     Guns* gun2 = new Guns(50, 50);
     Transformers* tran2 = new Transformers(gun2, 50, 16550, 50, 2134550);
-    
+
     ASSERT_TRUE(tran1 < tran2);
     ASSERT_FALSE(tran1 > tran2);
     delete tran1;
