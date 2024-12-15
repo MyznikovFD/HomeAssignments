@@ -11,7 +11,8 @@ class Guns
     uint _power;
     uint _fireRate;
 public:
-    Guns(const uint& p = 10, const uint& f = 10):
+    Guns(): _power(10), _fireRate(10) {};
+    Guns(const uint& p, const uint& f):
         _power(p%100), _fireRate(f%100) {};
     ~Guns() {};
     uint getPower()

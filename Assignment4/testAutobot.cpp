@@ -2,6 +2,7 @@
 //st129282@@student.spbu.ru
 //Assignment3
 //target - to test behaviour reloaded functions
+//target - to test behaviour default constructors
 
 #include <string>
 #include <iostream>
@@ -12,6 +13,15 @@
 
 TEST(autobots, Constructor)
 {
+//default constructors
+    Autobots au;
+    EXPECT_EQ(au.getEnginePower(), 10);
+    EXPECT_EQ(au.getStrength(), 10);
+    EXPECT_EQ(au.getFuel(), 10);
+    EXPECT_EQ(au.getAmmo(), 10);
+    EXPECT_EQ(au.getKindness(), 10);
+    EXPECT_EQ(au.roar(), "Hurra!");
+
     Guns* gun = new Guns(599, 89);
     Autobots* autobot = new Autobots(gun, 898, 899, 900, 901, 897, "hurra");
 

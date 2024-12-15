@@ -9,7 +9,7 @@
 typedef unsigned int uint;
 
 
-GodMasters::GodMasters(): Transformers(), _havePilot(false), _haveBracelets(false), _solidity(80) {};
+GodMasters::GodMasters(): Transformers(), _havePilot(false), _haveBracelets(false), _solidity(10) {};
 GodMasters::GodMasters(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const bool& havePilot, const bool& haveBracelets, const uint& solidity):
     Transformers(gun, enginePower, strength, fuel, ammo), _havePilot(havePilot), _haveBracelets(haveBracelets), _solidity(solidity%100)
 {};

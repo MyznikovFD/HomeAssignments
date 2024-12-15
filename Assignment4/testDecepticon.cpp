@@ -2,17 +2,27 @@
 #include <gtest/gtest.h>
 
 #include "Decepticon.h"
-
+//target - to test behaviour default constructors
 
 TEST(decepticons, Constructor)
 {
+//default constructors
+    Decepticons* de = new Decepticons();
+
+    EXPECT_EQ(de->getTrickery(), 10);
+    EXPECT_EQ(de->getCruelty(), 10);
+    EXPECT_EQ(de->getEnginePower(), 10);
+    EXPECT_EQ(de->getStrength(), 10);
+    EXPECT_EQ(de->getFuel(), 10);
+    EXPECT_EQ(de->getAmmo(), 10);
+
+
     Guns* gun = new Guns(599, 89);
     Decepticons* decepticon = new Decepticons(gun, 8098798, 834567899, 9567800, 945501, 8197, 1602);
-
-    EXPECT_EQ(decepticon->getTrickery(), 97);
-    EXPECT_EQ(decepticon->getCruelty(), 2);
     EXPECT_EQ(decepticon->getGunPower(), 99);
     EXPECT_EQ(decepticon->getGunFireRate(), 89);
+    EXPECT_EQ(decepticon->getTrickery(), 97);
+    EXPECT_EQ(decepticon->getCruelty(), 2);
     EXPECT_EQ(decepticon->getEnginePower(), 98);
     EXPECT_EQ(decepticon->getStrength(), 99);
     EXPECT_EQ(decepticon->getFuel(), 0);

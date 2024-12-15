@@ -11,13 +11,13 @@
 
 typedef unsigned int uint;
 
-Transformers::Transformers(): _gun(NULL),_strength(0), _fuel(0), _ammo(0)
+Transformers::Transformers(): _gun(NULL), _strength(10), _fuel(10), _ammo(10)
 {
-    _engine = new Engine();
+    Transformers::setEngine(10);
 };
 
 Transformers::Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo):
-    _gun(gun),_strength(strength%100), _fuel(fuel%100), _ammo(ammo)
+    _gun(gun), _strength(strength%100), _fuel(fuel%100), _ammo(ammo)
 {
     Transformers::setEngine(enginePower%100);
 };

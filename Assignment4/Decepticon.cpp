@@ -3,7 +3,7 @@
 
 typedef unsigned int uint;
 
-Decepticons::Decepticons(): Transformers(), _trickery(50), _cruelty(70) {};
+Decepticons::Decepticons(): Transformers(), _trickery(10), _cruelty(10) {};
 Decepticons::Decepticons(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& trickery, const uint& cruelty):
     Transformers(gun, enginePower, strength, fuel, ammo), _trickery(trickery%100), _cruelty(cruelty%100)
 {};

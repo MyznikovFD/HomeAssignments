@@ -12,6 +12,13 @@
 
 TEST(transformers, Constructor)
 {
+    Transformers tr;
+    EXPECT_EQ(tr.getEnginePower(), 10);
+    EXPECT_EQ(tr.getStrength(), 10);
+    EXPECT_EQ(tr.getFuel(), 10);
+    EXPECT_EQ(tr.getAmmo(), 10);
+    
+
     Guns* gun = new Guns(599, 89);
     Transformers* transformer = new Transformers(gun, 787, 34, 0, 9999);
 
@@ -23,6 +30,8 @@ TEST(transformers, Constructor)
     EXPECT_EQ(transformer->getAmmo(), 9999);
     delete transformer;
     delete gun;
+
+    
 };
 
 TEST(transformers, SettersGetters)

@@ -9,7 +9,7 @@
 
 typedef unsigned int uint;
 
-Autobots::Autobots(): Transformers(), _kindness(99), _whoop("Hurra!") {};
+Autobots::Autobots(): Transformers(), _kindness(10), _whoop("Hurra!") {};
 Autobots::Autobots(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& kindness, const std::string& whoop):
     Transformers(gun, enginePower, strength, fuel, ammo), _kindness(kindness%100), _whoop(whoop)
 {};

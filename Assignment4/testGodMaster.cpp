@@ -1,6 +1,7 @@
 //Myznikov Fedor Denisovich
 //st129282@@student.spbu.ru
 //Assignment3
+//target - to test behaviour default constructors
 
 #include <iostream>
 #include <gtest/gtest.h>
@@ -11,6 +12,17 @@
 
 TEST(godMaster, Constructor)
 {
+//default constructors
+    GodMasters godM;
+
+    EXPECT_EQ(godM.getHavePilot(), false);
+    EXPECT_EQ(godM.getHaveBracelets(), false);
+    EXPECT_EQ(godM.getSolidity(), 10);
+    EXPECT_EQ(godM.getEnginePower(), 10);
+    EXPECT_EQ(godM.getStrength(), 10);
+    EXPECT_EQ(godM.getFuel(), 10);
+    EXPECT_EQ(godM.getAmmo(), 10);
+
     Guns* gun = new Guns(1599, 189);
     GodMasters* godMaster = new GodMasters(gun, 1898, 1899, 1900, 1901, false, true, 555);
 
