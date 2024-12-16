@@ -65,3 +65,28 @@ TEST(decepticons, Methods)
     EXPECT_EQ(dcp.mock(), true);
     EXPECT_EQ(dcp.attack(), true);
 };
+
+//overloaded functions
+TEST(decepticons, overloading)
+{
+    Guns* gun = new Guns(500, 101);
+    Decepticons dec = Decepticons(gun, 8098798, 834567899, 9567800, 945501, 8197, 1602);
+    std::ostringstream oss;
+    oss << dec;
+    std::string instance = "Information about decepticon:\nGun Firerate: 1\nGun power: 0\nAmmo: 945501\nEngine power: 98\nStrength: 99\nFuel: 0\nTrickery: 97\nCruelty: 2\n";
+    EXPECT_EQ(oss.str(), instance);
+    delete gun;
+
+
+
+    Guns* gun1 = new Guns(599, 101);
+    Decepticons dec1 = Decepticons(gun1, 8098798, 567899, 9567800, 945501, 8197, 1602);
+
+    Guns* gun2 = new Guns(50, 50);
+    Decepticons dec2 = Decepticons(gun2, 50, 16550, 50, 2134550, 901, 834567899);
+
+    EXPECT_TRUE(dec2 < dec1);
+    ASSERT_TRUE(dec1 > dec2);
+    delete gun1;
+    delete gun2;
+};

@@ -70,3 +70,27 @@ TEST(godMaster, Methods)
     EXPECT_EQ(gdm.fight(), true);
     EXPECT_EQ(gdm.dance(), true);
 };
+
+TEST(godMaster, overloading)
+{
+    Guns* gun = new Guns(98765456, 345678);
+    GodMasters gdm = GodMasters(gun, 1898, 1899, 1900, 1901, false, true, 555);
+    std::ostringstream oss;
+    oss << gdm;
+    std::string instance = "Information about godMaster:\nGun Firerate: 78\nGun power: 56\nAmmo: 1901\nEngine power: 98\nStrength: 99\nFuel: 0\nHavePilot: 0\nHaveBracelets: 1\nSolidity: 55\n";
+    EXPECT_EQ(oss.str(), instance);
+    delete gun;
+
+
+
+    Guns* gun1 = new Guns(599, 101);
+    GodMasters gdm1 = GodMasters(gun1, 898, 899, 900, 901, false, false, 9876);
+
+    Guns* gun2 = new Guns(50, 50);
+    GodMasters gdm2 = GodMasters(gun2, 1898, 1899, 1900, 1901, false, true, 555);
+
+    ASSERT_FALSE(gdm2 < gdm1);
+    ASSERT_FALSE(gdm2 > gdm1);
+    delete gun1;
+    delete gun2;
+};

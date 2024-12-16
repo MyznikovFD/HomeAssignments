@@ -24,8 +24,8 @@ public:
     Transformers(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo);
     virtual ~Transformers();
 
-    bool operator>(Transformers* other);
-    bool operator<(Transformers* other);
+    bool operator>(Transformers& other);
+    bool operator<(Transformers& other);
 
     bool move();
     bool jump();

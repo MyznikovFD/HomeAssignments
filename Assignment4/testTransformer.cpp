@@ -81,16 +81,14 @@ TEST(transformers, overloading)
     delete gun;
 
     Guns* gun1 = new Guns(599, 89);
-    Transformers* tran1 = new Transformers(gun1, 787, 234, 0, 9999);
+    Transformers tran1 = Transformers(gun1, 787, 234, 0, 9999);
 
     Guns* gun2 = new Guns(50, 50);
-    Transformers* tran2 = new Transformers(gun2, 50, 16550, 50, 2134550);
+    Transformers tran2 = Transformers(gun2, 50, 16550, 50, 2134550);
 
     ASSERT_TRUE(tran1 < tran2);
     ASSERT_FALSE(tran1 > tran2);
-    delete tran1;
     delete gun1;
-    delete tran2;
     delete gun2;
 };
 

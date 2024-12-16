@@ -33,15 +33,23 @@ std::ostream& operator<<(std::ostream& oss, Transformers& tr)
     oss << "Information about transformer:" << "\n" << "Gun Firerate: " << tr.getGunFireRate() << "\n" << "Gun power: " << tr.getGunPower() << "\n" << "Ammo: " << tr.getAmmo() << "\n" << "Engine power: " << tr.getEnginePower() << "\n" << "Strength: " << tr.getStrength() << "\n" << "Fuel: " << tr.getFuel() << std::endl;
     return oss;
 };
+
+
 //overloaded function
-bool Transformers::operator>(Transformers* other)
+// there are no necessity to overload. It is legitimate to pass base class' pointer for child. 
+
+bool Transformers::operator>(Transformers& other)
 {
-    return (this->getStrength() > other->getStrength());
+    return (_strength > other.getStrength());
 };
+
+
 //overloaded function
-bool Transformers::operator<(Transformers* other)
+// there are no necessity to overload. It is legitimate to pass base class' pointer for child.
+
+bool Transformers::operator<(Transformers& other)
 {
-    return (this->getStrength() < other->getStrength());
+    return (_strength < other.getStrength());
 };
 
 

@@ -15,6 +15,15 @@ GodMasters::GodMasters(Guns* gun, const uint& enginePower, const uint& strength,
 {};
 GodMasters::~GodMasters() {};
 
+
+//overloaded function
+std::ostream& operator<<(std::ostream& oss, GodMasters& tr)
+{
+    oss << "Information about godMaster:" << "\n" << "Gun Firerate: " << tr.getGunFireRate() << "\n" << "Gun power: " << tr.getGunPower() << "\n" << "Ammo: " << tr.getAmmo() << "\n" << "Engine power: " << tr.getEnginePower() << "\n" << "Strength: " << tr.getStrength() << "\n" << "Fuel: " << tr.getFuel() << "\n" << "HavePilot: " << tr.getHavePilot() << "\n" << "HaveBracelets: " << tr.getHaveBracelets() << "\n" << "Solidity: " << tr.getSolidity() << std::endl;
+    return oss;
+};
+
+
 bool GodMasters::fight()
 {
     return true;

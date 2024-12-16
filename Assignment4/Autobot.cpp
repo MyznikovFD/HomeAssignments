@@ -15,6 +15,16 @@ Autobots::Autobots(Guns* gun, const uint& enginePower, const uint& strength, con
 {};
 Autobots::~Autobots() {};
 
+
+//overloaded function
+std::ostream& operator<<(std::ostream& oss, Autobots& tr)
+{
+    oss << "Information about autobot:" << "\n" << "Gun Firerate: " << tr.getGunFireRate() << "\n" << "Gun power: " << tr.getGunPower() << "\n" << "Ammo: " << tr.getAmmo() << "\n" << "Engine power: " << tr.getEnginePower() << "\n" << "Strength: " << tr.getStrength() << "\n" << "Fuel: " << tr.getFuel() << "\n" << "Kindness: " << tr.getKindness() << "\n" << "Whoop: " << tr.roar() << std::endl;
+    return oss;
+};
+
+
+
 bool Autobots::defend()
 {
     return true;

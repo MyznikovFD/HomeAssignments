@@ -16,14 +16,20 @@ public:
     Autobots();
     Autobots(Guns* gun, const uint& enginePower, const uint& strength, const uint& fuel, const uint& ammo, const uint& kindness, const std::string& whoop);
     ~Autobots();
+    
+    
     bool defend();
     bool shame();
+    
     void setWhoop(std::string whoop);
     void setKindness(uint kindness);
+    
     std::string roar();
     uint getKindness();
 private:
     uint _kindness;
     std::string _whoop;
 };
+//overloaded function
+std::ostream& operator<<(std::ostream& oss, Autobots& tr);
 #endif
