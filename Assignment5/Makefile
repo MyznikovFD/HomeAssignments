@@ -19,8 +19,6 @@ $(PROJECT): $(OBJ)
 	$(CXX) -o $@ $(OBJ) $(CXXFLAGS)
 
 
-test: $(PROJECT)
-
 all: $(PROJECT)
 
 .PHONY: clean
