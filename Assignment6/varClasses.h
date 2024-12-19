@@ -3,29 +3,14 @@
 //Assignment6
 //target - to explore working with templates
 
-#ifndef DECLARATION_H
-#define DECLARATION_H
+#ifndef SUBCLASSES_H
+#define SUBCLASSES_H
 
 #include <iostream>
 #include <vector>
 
-template <class T>
 
-class MyClass
-{
-    MyClass(const int& n, const std::vector<float>& v, const T& c): _n(n), _vect(v), _instance(c) {};
-    int _n;
-    std::vector<float> _vect;
-    T _instance;
-    
-    public:
-    bool foo()
-    {
-        return _instance.bar(_n, _vect);
-    };
-};
-
-class Class1
+class class1
 {
 public:
     int c_1_1() {return 0;};
@@ -38,7 +23,7 @@ public:
     };
 };
 
-class Class2
+class class2
 {
 public:
     int c_2_1() {return 0;};
@@ -51,7 +36,7 @@ public:
     };
 };
 
-class Class3
+class class3
 {
 public:
     int c_3_1() {return 0;};
