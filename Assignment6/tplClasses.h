@@ -13,30 +13,30 @@ template <class T>
 
 class MyClass
 {
-    MyClass(const int& n, const std::vector<float>& v, const T* c): _n(n), _vect(v), _instance(c) {};
     int _n;
     std::vector<float> _vect;
-    T* _instance;
+    T _instance;
     
     public:
+    MyClass(const int& n, const std::vector<float>& v, const T& c): _n(n), _vect(v), _instance(c) {};    
     bool foo()
     {
-        return _instance->bar(_n, _vect);
+        return _instance.bar(_n, _vect);
     };
 };
 
 
 
-template <class T>
+template <>
 
 class MyClass<int>
 {
-    MyClass(const int& n, const std::vector<float>& v, const T* c): _n(n), _vect(v), _instance(c) {};
     int _n;
     std::vector<float> _vect;
-    T* _instance;
+    int _instance;
     
     public:
+    MyClass(const int& n, const std::vector<float>& v, const int& c): _n(n), _vect(v), _instance(c) {};
     bool foo()
     {
         return true;
@@ -49,12 +49,12 @@ template <>
 
 class MyClass<double>
 {
-    MyClass(const int& n, const std::vector<float>& v, const T8 c): _n(n), _vect(v), _instance(c) {};
     int _n;
     std::vector<float> _vect;
-    T* _instance;
+    double _instance;
     
     public:
+    MyClass(const int& n, const std::vector<float>& v, const double& c): _n(n), _vect(v), _instance(c) {};
     bool foo()
     {
         return false;

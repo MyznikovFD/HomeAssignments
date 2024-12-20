@@ -16,18 +16,20 @@ TEST-OBJ = test.o
 
 default: all
 
-%.o: %.cpp
-	$(CXX) -c -o $@ $^ $(CXXFLAGS)
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 $(PROJECT): main.o
 	$(CXX) -o $@ main.o $(CXXFLAGS)
 
-$(TESTPROJECT): $(TEST-OBJ) $(PROJECT)
+$(TESTPROJECT): $(TEST-OBJ)
 	$(CXX) -o $@ $^ $(TESTCXXFLAGS)
 
-all: $(PROJECT)
+.PHONY: test
 
 test: $(TESTPROJECT)
+
+all: $(PROJECT)
 
 clean:
 	rm -f *.o
