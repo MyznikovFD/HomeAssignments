@@ -1,3 +1,8 @@
+//Myznikov Fedor Denisovich
+//st129282@student.spbu.ru
+//Assignment6
+//target - to test written templates
+
 #include <gtest/gtest.h>
 #include <iostream>
 #include <vector>
